@@ -12,7 +12,7 @@ function StudentList() {
     }, [])
 
     const loadData = () => {
-        fetch("https://kinara-studentlist.onrender.com/student")
+        fetch("https://testapi-stddata.onrender.com/student")
             .then((res) => {
                 return res.json()
             })
@@ -29,7 +29,7 @@ function StudentList() {
     }
     const handleSubmit = async (e) => {
         e.preventDefault()
-        return await axios.get(`https://kinara-studentlist.onrender.com/student?q=${value}`)
+        return await axios.get(`https://testapi-stddata.onrender.com/student?q=${value}`)
             .then((res) => {
                 setData(res.data)
                 setValue("")
