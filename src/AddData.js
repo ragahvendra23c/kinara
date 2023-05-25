@@ -12,7 +12,7 @@ function AddData() {
     const handleSubmit = (e) => {
         e.preventDefault()
         const data = { id, name, totalMarks, mobile }
-        fetch("https://kinara-studentlist.onrender.com/student", {
+        fetch("https://testapi-stddata.onrender.com/student", {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(data)
