@@ -12,7 +12,7 @@ function StudentList() {
     }, [])
 
     const loadData = () => {
-        fetch("https://kinara-test-api.onrender.com/student")
+        fetch("https://kinara-studentlist.onrender.com/student")
             .then((res) => {
                 return res.json()
             })
@@ -29,7 +29,7 @@ function StudentList() {
     }
     const handleSubmit = async (e) => {
         e.preventDefault()
-        return await axios.get(`https://kinara-test-api.onrender.com/student?q=${value}`)
+        return await axios.get(`https://kinara-studentlist.onrender.com/student?q=${value}`)
             .then((res) => {
                 setData(res.data)
                 setValue("")
@@ -38,17 +38,7 @@ function StudentList() {
                 console.log(err)
             })
     }
-    // reset functinality
-    const reset = (e) => {
-        e.preventDefault()
-        fetch("https://kinara-test-api.onrender.com/student")
-            .then((res) => {
-                return res.json()
-            })
-            .then((resp) => {
-                setData(resp)
-            })
-    }
+   
       
 
     const [page, setPage] = useState(0);
