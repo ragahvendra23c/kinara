@@ -92,7 +92,7 @@ function StudentList() {
                                         <tr key={data}>
                                             <td>{item.id}</td>
                                             <td>{item.name}</td>
-                                            <td>{item.totalMarks}</td>
+                                            <td>{item.totalmarks}</td>
                                             <td>{item.mobile}</td>
                                             
                                         </tr>
